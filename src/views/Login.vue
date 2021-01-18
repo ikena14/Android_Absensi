@@ -14,7 +14,7 @@
                 <ion-label position="floating">Password</ion-label>
                 <ion-input type="password"></ion-input>
             </ion-item>
-            <ion-button expand="block">Login</ion-button>
+            <ion-button expand="block" @click="login">Login</ion-button>
         </ion-content>
         <ion-footer></ion-footer>
     </ion-page>
@@ -46,6 +46,13 @@ export default defineComponent({
         IonLabel,
         IonInput,
         IonButton
+    },
+    methods:{
+        login(){
+            //Cek User Login
+            //Kalau Pass User benaer , nanti masuk ke kelas
+            this.$router.push("/kelas")
+        }
     }
 })
 </script>
